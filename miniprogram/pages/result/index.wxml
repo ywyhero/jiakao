@@ -1,0 +1,22 @@
+<!--pages/result/index.wxml-->
+<view class='result'>
+  <view class='result-top'>
+    <image class='result-top-img' src='{{userInfo.avatarUrl}}'></image>
+    <view class='result-top-name'>{{userInfo.nickName}}</view>
+    <view class='result-top-score'>{{scoreVal}}</view>
+  </view>
+  <view class='result-lists-val'>您的答案：</view>
+  <view class='result-lists'>
+    <view class='result-list {{item.isRight ? "" : "active"}}' wx:if="{{item.answer}}" wx:for="{{lists}}" wx:key="index">{{item.answer}}</view>
+  </view>
+  <view class='result-exlpains-lists-value'>错误解析：</view>
+  <view class='result-exlpains-lists'>
+    <view class='result-exlpains-list' wx:if="{{item.explains}}" wx:for="{{lists}}" wx:key="index">
+      <view class='result-exlpains-list-num'>第{{item.index}}题</view>
+      <view class='result-exlpains-list-val'>正确答案：{{item.rightAnswer}}</view>
+      
+      <view class='result-exlpains-list-explain-val'>答案解析：</view>
+      <view class='result-exlpains-list-explain'>{{item.explains}}</view>
+    </view>
+  </view>
+</view>

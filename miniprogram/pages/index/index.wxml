@@ -1,0 +1,69 @@
+<view class="car">
+  <view class='car-subject'>
+    <view class='car-subject-title'>科目类型</view>
+    <view class='car-subject-lists'>
+      <view class='car-subject-val {{subject === 1 ? "active" : ""}}' data-subject="1" bindtap='subjectClick'>科目一</view>
+      <view class='car-subject-val {{subject === 4 ? "active" : ""}}' data-subject="4" bindtap='subjectClick'>科目四</view>
+    </view>
+    
+  </view>
+  <view class='car-model'>
+    <view class='car-model-title'>驾照类型</view>
+    <view class='car-model-lists'>
+      <view class='car-model-list {{model === "c1" ? "active" : ""}}' data-model='c1' bindtap='modelClick'>
+        <icon class='car-model-list-icon' color='orange' type='success'></icon>
+        <image class='car-model-list-img' src='./../../assets/image/car.png'></image>
+        <view class='car-model-list-val'>C1</view>
+      </view>
+       <view class='car-model-list {{model === "c2" ? "active" : ""}}' data-model='c2' bindtap='modelClick'>
+        <icon class='car-model-list-icon' color='orange' type='success'></icon>
+        <image class='car-model-list-img' src='./../../assets/image/car.png'></image>
+        <view class='car-model-list-val'>C2</view>
+      </view>
+      <view class='car-model-list {{model === "b1" ? "active" : ""}}' data-model='b1' bindtap='modelClick'>
+        <icon class='car-model-list-icon' color='orange' type='success'></icon>
+        <image class='car-model-list-img' src='./../../assets/image/lorry.png'></image>
+        <view class='car-model-list-val'>B1</view>
+      </view>
+      <view class='car-model-list {{model === "b2" ? "active" : ""}}' data-model='b2' bindtap='modelClick'>
+        <icon class='car-model-list-icon' color='orange' type='success'></icon>
+        <image class='car-model-list-img' src='./../../assets/image/lorry.png'></image>
+        <view class='car-model-list-val'>B2</view>
+      </view>
+      <view class='car-model-list {{model === "a1" ? "active" : ""}}' data-model='a1' bindtap='modelClick'>
+        <icon class='car-model-list-icon' color='orange' type='success'></icon>
+        <image class='car-model-list-img' src='./../../assets/image/bus.png'></image>
+        <view class='car-model-list-val'>A1</view>
+      </view>
+      <view class='car-model-list {{model === "a2" ? "active" : ""}}' data-model='a2' bindtap='modelClick'>
+        <icon class='car-model-list-icon' color='orange' type='success'></icon>
+        <image class='car-model-list-img' src='./../../assets/image/bus.png'></image>
+        <view class='car-model-list-val'>A2</view>
+      </view>
+    </view>
+    
+  </view>
+ <view class='car-type'>
+  <view class='car-type-title'>真题类型</view>
+  <view class='car-type-lists'>
+    <view class='car-type-list' data-type='rand' bindtap='typeClick'>
+      <image class='car-type-list-img' src='./../../assets/image/rand.png'></image>
+      <view class='car-type-list-val'>全真模拟</view>
+    </view>
+    <view class='car-type-list' data-type='order' bindtap='typeClick'>
+      <image class='car-type-list-img' src='./../../assets/image/order.png'></image>
+      <view class='car-type-list-val'>顺序练习</view>
+    </view>
+  </view>
+ </view>
+</view>
+<view class='login' hidden='{{!isShow}}'>
+  <view class='login-box'>
+      <image mode="aspectFill" class='login-img' src='./../../assets/image/logo.jpeg'></image>
+      <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="login-btn"
+    >授权登录</button>
+  </view>
+</view>

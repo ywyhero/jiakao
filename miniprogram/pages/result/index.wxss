@@ -1,0 +1,68 @@
+/* pages/result/index.wxss */
+.result{
+  padding: 30rpx;
+}
+.result-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result-top-img{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 180rpx;
+  margin-bottom: 40rpx;
+}
+.result-top-name{
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40rpx;
+}
+.result-top-score{
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #1dacf9;
+  margin-bottom: 40rpx;
+}
+.result-lists-val{
+  color: #333;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+.result-lists{
+  display: flex;
+  flex-wrap: wrap;
+}
+.result-list{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #333;
+  font-size: 28rpx;
+  background: #1dacf9;
+  margin-bottom: 20rpx;
+}
+.result-list.active{
+  background: red;
+}
+.result-exlpains-lists-value{
+  color: #333;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+.result-exlpains-lists{
+
+}
+.result-exlpains-list{
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+.result-exlpains-list-num{
+  flex-wrap: 700;
+}

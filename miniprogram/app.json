@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/index",
+    "pages/randDetail/index",
+    "pages/result/index"
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1DACF9",
+    "navigationBarTitleText": "驾考真题",
+    "navigationBarTextStyle": "white"
+  },
+  "cloud": true
+}

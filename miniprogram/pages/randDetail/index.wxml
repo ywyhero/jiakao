@@ -1,0 +1,43 @@
+<view class='detail' wx:if="{{isShow}}" style="height: {{height}}rpx">
+  <view class='detail-question'>
+    <view class='detail-question-title'>{{index + 1}}. {{question.question}}</view>
+    <image class='detail-question-img' wx:if="{{question.url}}" mode='aspectFit' src='{{question.url}}'></image>
+    <view class='detail-question-lists'>
+      <view class='detail-question-list {{answer === "1" ? "active" : ""}}}' data-answer="1" bindtap='choose'>
+        <view class='detail-question-list-select'>A</view>
+        <view class='detail-question-list-val'>{{question.item1}}</view>
+      </view>
+      <view class='detail-question-list {{answer === "2" ? "active" : ""}}' data-answer="2" bindtap='choose'>
+        <view class='detail-question-list-select'>B</view>
+        <view class='detail-question-list-val'>{{question.item2}}</view>
+      </view>
+      <view wx:if="{{question.item3}}" class='detail-question-list {{answer === "3" ? "active" : ""}}' data-answer="3" bindtap='choose'>
+        <view class='detail-question-list-select'>C</view>
+        <view class='detail-question-list-val'>{{question.item3}}</view>
+      </view>
+      <view wx:if="{{question.item4}}" class='detail-question-list {{answer === "4" ? "active" : ""}}' data-answer="4" bindtap='choose'>
+        <view class='detail-question-list-select'>D</view>
+        <view class='detail-question-list-val'>{{question.item4}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='detail-explain' hidden='{{!isShow}}'>
+    <view class='detail-explain-answer'>
+      <view class='detail-explain-val'>正确答案：</view>
+      {{question.answer}}
+    </view>
+    <view class='detail-explain-answer'>
+      <view class='detail-explain-val'>答案解释：</view>
+      <view class='detail-explain-main'>{{question.explains}}</view>
+    </view>
+  </view> -->
+
+</view>
+<view class='detail-bottom'>
+  <view class='detail-progress'>
+    <view class='detail-progress-pre {{(index + 1) === 1 ? "active" : "" }} ' bindtap='preClick'>上一题</view>
+    <view class='detail-progress-percent'>{{index + 1 }} / {{total}}</view>
+    <!-- <view class='detail-progress-next {{(index + 1) === total ? "active" : "" }}' bindtap='nextClick'>下一题</view> -->
+     <view class='detail-progress-next}}' bindtap='submit'>交卷</view>
+  </view>
+</view>
