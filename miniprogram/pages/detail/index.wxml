@@ -1,4 +1,4 @@
-<view class='detail' style="height: {{height}}rpx">
+<view class='detail' style="height: {{height}}rpx" wx:if="{{isContentShow}}">
   <view class='detail-question'>
     <view class='detail-question-title'>{{index + 1}}. {{question.question}}</view>
     <image class='detail-question-img' wx:if="{{question.url}}" mode='aspectFit' src='{{question.url}}'></image>
@@ -33,7 +33,7 @@
   </view>
 
 </view>
-<view class='detail-bottom'>
+<view class='detail-bottom' wx:if="{{isContentShow}}">
   <view class='detail-progress'>
     <view class='detail-progress-pre {{(index + 1) === 1 ? "active" : "" }} ' bindtap='preClick'>上一题</view>
     <view class='detail-progress-percent'>{{index + 1 }} / {{total}}</view>

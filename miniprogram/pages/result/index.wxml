@@ -13,6 +13,9 @@
   <view class='result-exlpains-lists'>
     <view class='result-exlpains-list' wx:if="{{item.explains}}" wx:for="{{lists}}" wx:key="index">
       <view class='result-exlpains-list-num'>第{{item.index}}题</view>
+      <view class='result-exlpains-list-val'>问题：{{item.question}}</view>
+      <image class='result-exlpains-list-img' wx:if="{{item.url}}" mode='aspectFit' src='{{item.url}}'></image>
+       <view class='result-exlpains-list-val'>您的答案：{{item.answer || "没选择"}}</view>
       <view class='result-exlpains-list-val'>正确答案：{{item.rightAnswer}}</view>
       
       <view class='result-exlpains-list-explain-val'>答案解析：</view>

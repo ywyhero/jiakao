@@ -33,11 +33,11 @@
   </view> -->
 
 </view>
-<view class='detail-bottom'>
+<view class='detail-bottom' wx:if="{{isShow}}">
   <view class='detail-progress'>
     <view class='detail-progress-pre {{(index + 1) === 1 ? "active" : "" }} ' bindtap='preClick'>上一题</view>
     <view class='detail-progress-percent'>{{index + 1 }} / {{total}}</view>
     <!-- <view class='detail-progress-next {{(index + 1) === total ? "active" : "" }}' bindtap='nextClick'>下一题</view> -->
-     <view class='detail-progress-next}}' bindtap='submit'>交卷</view>
+     <view class='detail-progress-next' bindtap='submit'>交卷</view>
   </view>
 </view>

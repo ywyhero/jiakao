@@ -57,13 +57,9 @@
   </view>
  </view>
 </view>
-<view class='login' hidden='{{!isShow}}'>
-  <view class='login-box'>
-      <image mode="aspectFill" class='login-img' src='./../../assets/image/logo.jpeg'></image>
-      <button 
+<button 
+ hidden='{{!isShow}}'
       open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
-      class="login-btn"
+      class="login"
     >授权登录</button>
-  </view>
-</view>

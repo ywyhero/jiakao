@@ -129,7 +129,9 @@ Page({
     for (let i = 0; i < total; i++) {
       let obj = {
         isRight: false,
+        question: '',
         answer: '',
+        url: '',
         explains: '',
         rightAnswer: '',
         index: 0
@@ -138,6 +140,8 @@ Page({
         score += 1
         obj.isRight = true
       } else {
+        obj.question = questions[i].question
+        obj.url = questions[i].url
         obj.explains = questions[i].explains
       }
       obj.answer = answers[i];
@@ -155,6 +159,10 @@ Page({
         if(res.confirm) {
           wx.navigateTo({
             url: `/pages/result/index?score=${score}`,
+            success: res => {
+              wx.removeStorageSync(`${this.data.subject}_${this.data.model}_${this.data.type}_right_answers`)
+              wx.removeStorageSync(`${this.data.subject}_${this.data.model}_${this.data.type}_answers`)
+            }
           })
         }
       }

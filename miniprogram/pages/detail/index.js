@@ -55,9 +55,9 @@ Page({
   choose(e) {
     if(this.data.answer !== '') return;
     const answer = e.currentTarget.dataset.answer;
-    answers = wx.getStorageSync(`${this.data.subject}_${this.data.model}_${this.data,typ}answers`) || []
+    answers = wx.getStorageSync(`${this.data.subject}_${this.data.model}_${this.data.type}_answers`) || []
     answers.push(answer)
-    wx.setStorageSync(`${this.data.subject}_${this.data.model}_${this.data,typ}answers`, answers)
+    wx.setStorageSync(`${this.data.subject}_${this.data.model}_${this.data.type}_answers`, answers)
     let isShow = false;
     if(answer !== this.data.question.answer) {
       isShow = true
@@ -74,7 +74,7 @@ Page({
     let index = this.data.index;
     if(index === 0) return;
     index = index - 1;
-    answers = wx.getStorageSync(`${this.data.subject}_${this.data.model}_${this.data,typ}answers`) || []
+    answers = wx.getStorageSync(`${this.data.subject}_${this.data.model}_${this.data.type}_answers`) || []
     let answer = ''
     let isShow = false
     let question = questions[index]
@@ -95,7 +95,7 @@ Page({
   nextClick() {
     let index = this.data.index;
     if (index === this.data.total) return;
-    answers = wx.getStorageSync(`${this.data.subject}_${this.data.model}_${this.data,typ}answers`) || []
+    answers = wx.getStorageSync(`${this.data.subject}_${this.data.model}_${this.data.type}_answers`) || []
     index = index + 1;
     let question = questions[index]
     let isShow = false

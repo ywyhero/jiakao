@@ -120,35 +120,5 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, .5);
-}
-.login-box{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30rpx;
-  width: 60%;
-  height: 240rpx;
-  background: #fff;
-  border-radius: 8rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.login-img{
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 120rpx;
-}
-.login-btn{
-  width: 200rpx;
-  height: 60rpx;
-  background: #1DACF9;
-  font-weight: 700;
-  font-size: 32rpx;
-  line-height: 60rpx;
-  text-align: center;
-  color: #fff;
-  margin-top: 40rpx;
+  background: transparent;
 }
